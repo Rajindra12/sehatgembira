@@ -1,111 +1,53 @@
-<x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('User Dashboard') }}
-        </h2>
-    </x-slot>
-
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg p-6">
-                Welcome to the user dashboard!
+@extends('layouts.app')
+@section('content')
+<div class="py-12">
+        <div class="hero-content flex-col lg:flex-row-reverse max-w-7xl mx-auto sm:px-6 lg:px-8">
+            <img
+            src="https://img.freepik.com/free-photo/empty-stadium-day_1308-41390.jpg?t=st=1745814504~exp=1745818104~hmac=da553dfa60a4fa922a576912d118d89dae02fc8e4cb78ea1d070c7ca51965be5&w=1380"
+            class="max-w-lg rounded-lg shadow-2xl"
+            />
+            <div class="">
+            <h1 class="text-5xl font-bold">Box Office News!</h1>
+            <p class="py-6">
+                Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
+                quasi. In deleniti eaque aut repudiandae et a id nisi.
+            </p>
+            <button class="btn btn-primary">Get Started</button>
             </div>
         </div>
     </div>
 
     <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="col-lg-8">
-                <div class="card">
-                  <div class="table-responsive">
-                    <table class="table table-vcenter card-table">
-                      <thead>
-                        <tr>
-                          <th>Name</th>
-                          <th>Title</th>
-                          <th>Email</th>
-                          <th>Role</th>
-                          <th class="w-1"></th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td>Paweł Kuna</td>
-                          <td class="text-secondary">UI Designer, Training</td>
-                          <td class="text-secondary"><a href="#" class="text-reset">paweluna@howstuffworks.com</a></td>
-                          <td class="text-secondary">User</td>
-                          <td>
-                            <a href="#">Edit</a>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>Jeffie Lewzey</td>
-                          <td class="text-secondary">Chemical Engineer, Support</td>
-                          <td class="text-secondary"><a href="#" class="text-reset">jlewzey1@seesaa.net</a></td>
-                          <td class="text-secondary">User</td>
-                          <td>
-                            <a href="#">Edit</a>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>Mallory Hulme</td>
-                          <td class="text-secondary">Geologist IV, Support</td>
-                          <td class="text-secondary"><a href="#" class="text-reset">mhulme2@domainmarket.com</a></td>
-                          <td class="text-secondary">User</td>
-                          <td>
-                            <a href="#">Edit</a>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>Dunn Slane</td>
-                          <td class="text-secondary">Research Nurse, Sales</td>
-                          <td class="text-secondary"><a href="#" class="text-reset">dslane3@epa.gov</a></td>
-                          <td class="text-secondary">Owner</td>
-                          <td>
-                            <a href="#">Edit</a>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>Emmy Levet</td>
-                          <td class="text-secondary">VP Product Management, Accounting</td>
-                          <td class="text-secondary"><a href="#" class="text-reset">elevet4@senate.gov</a></td>
-                          <td class="text-secondary">User</td>
-                          <td>
-                            <a href="#">Edit</a>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>Maryjo Lebarree</td>
-                          <td class="text-secondary">Civil Engineer, Product Management</td>
-                          <td class="text-secondary"><a href="#" class="text-reset">mlebarree5@unc.edu</a></td>
-                          <td class="text-secondary">User</td>
-                          <td>
-                            <a href="#">Edit</a>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>Egan Poetz</td>
-                          <td class="text-secondary">Research Nurse, Engineering</td>
-                          <td class="text-secondary"><a href="#" class="text-reset">epoetz6@free.fr</a></td>
-                          <td class="text-secondary">Admin</td>
-                          <td>
-                            <a href="#">Edit</a>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>Kellie Skingley</td>
-                          <td class="text-secondary">Teacher, Services</td>
-                          <td class="text-secondary"><a href="#" class="text-reset">kskingley7@columbia.edu</a></td>
-                          <td class="text-secondary">Owner</td>
-                          <td>
-                            <a href="#">Edit</a>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
+      <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+          <div class="stats stats-vertical lg:stats-horizontal shadow">
+              <div class="stat">
+                <div class="stat-title">Downloads</div>
+                <div class="stat-value">31K</div>
+                <div class="stat-desc">Jan 1st - Feb 1st</div>
               </div>
-        </div>
+            
+              <div class="stat">
+                <div class="stat-title">New Users</div>
+                <div class="stat-value">4,200</div>
+                <div class="stat-desc">↗︎ 400 (22%)</div>
+              </div>
+            
+              <div class="stat">
+                <div class="stat-title">New Registers</div>
+                <div class="stat-value">1,200</div>
+                <div class="stat-desc">↘︎ 90 (14%)</div>
+              </div>
+            </div>
+      </div>
     </div>
-</x-app-layout>
+
+    {{-- <div class="py-12">
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg p-6">
+                <div class="p-6 text-gray-900">
+                  {{ __("You're Logged In!") }}
+                </div>
+            </div>
+        </div>
+    </div> --}}
+@endsection

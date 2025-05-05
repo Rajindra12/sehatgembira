@@ -28,6 +28,10 @@ Route::middleware(['auth'])->group(function () {
         return app(UserDashboardController::class)->index();
     })->name('dashboard');
     
+    Route::get('/fields', function () {
+        return view('user.fields'); // Ensure the view path matches the file location
+    })->name('fields');
+
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
