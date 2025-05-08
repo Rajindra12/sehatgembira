@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\AdminDashboardController;
 use App\Http\Controllers\UserDashboardController;
+use App\Http\Controllers\FieldsController;
 use Illuminate\Support\Facades\Auth;
 
 Route::get('/', function () {
@@ -28,9 +29,7 @@ Route::middleware(['auth'])->group(function () {
         return app(UserDashboardController::class)->index();
     })->name('dashboard');
     
-    Route::get('/fields', function () {
-        return view('user.fields'); // Ensure the view path matches the file location
-    })->name('fields');
+    Route::get('/fields', [FieldsController::class, 'index'])->name('fields');
 
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
