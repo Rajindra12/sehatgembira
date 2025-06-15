@@ -5,9 +5,9 @@
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="flex flex-col justify-center items-center bg-white sm:rounded-lg p-6 shadow">
-                <h1 class="text-5xl font-bold text-center">Selamat datang di halaman pengguna!</h1>
+                <h1 class="text-5xl font-bold text-center">Pilih Lapangan yang Ingin Kamu Sewa</h1>
                 <p class="py-6 text-center text-gray-700">
-                    Di sini Anda dapat melihat produk-produk yang tersedia dan melakukan pembelian.
+                    Di Sini Menyediakan Berbagai Lapangan Dengan Kualitas Terbaik
                 </p>
             </div>
         </div>
